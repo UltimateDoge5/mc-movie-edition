@@ -8,6 +8,21 @@
     "sounds": [
       "iamsteve:steve"
     ]
+  },
+  "enderpearl": {
+    "sounds": [
+      "iamsteve:enderpearl"
+    ]
+  },
+  "water_bucket": {
+    "sounds": [
+      "iamsteve:water_bucket"
+    ]
+  },
+  "flint_and_steel": {
+    "sounds": [
+      "iamsteve:flint_and_steel"
+    ]
   }
 }
 
