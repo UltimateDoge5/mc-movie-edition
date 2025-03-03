@@ -1,0 +1,13 @@
+{
+  "crafting_table": {
+    "sounds": [
+      "iamsteve:crafting_table"
+    ]
+  },
+  "steve": {
+    "sounds": [
+      "iamsteve:steve"
+    ]
+  }
+}
+

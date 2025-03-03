@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "org.pkozak.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "OnPlayerRespawnMixin",
+    "ItemEntityMixin",
+    "ItemEventsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": []
+}
