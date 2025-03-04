@@ -14,14 +14,13 @@ import net.minecraft.sound.SoundCategory;
 import org.pkozak.IAmSteveClient;
 import org.pkozak.Sounds;
 import org.pkozak.Trigger;
-import org.pkozak.TriggerType;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ClientPlayNetworkHandler.class)
-public class OnPlayerRespawnMixin {
+public class ClientNetworkHandlerMixin {
     // I tried to be all fancy with this and tried using @Local, but it didn't work, so there is this incredibly stupid solution
     @Inject(at = @At("TAIL"), method = "onPlayerRespawn(Lnet/minecraft/network/packet/s2c/play/PlayerRespawnS2CPacket;)V")
     public void onPlayerRespawn(PlayerRespawnS2CPacket packet, CallbackInfo ci) {

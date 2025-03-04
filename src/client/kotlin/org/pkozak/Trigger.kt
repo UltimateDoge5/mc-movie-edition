@@ -4,12 +4,12 @@ import net.minecraft.block.Block
 import net.minecraft.item.Item
 import net.minecraft.sound.SoundEvent
 
-class Trigger(public val soundEvent: SoundEvent) {
-    public var block: Block? = null
-    public var item: Item? = null
+class Trigger(val soundEvent: SoundEvent) {
+    var block: Block? = null
+    var item: Item? = null
     var triggers = mutableSetOf<TriggerType>()
 
-    public fun getTriggerTypes(): Set<TriggerType> {
+    fun getTriggerTypes(): Set<TriggerType> {
         return triggers
     }
 
@@ -27,10 +27,13 @@ class Trigger(public val soundEvent: SoundEvent) {
         triggers.add(TriggerType.Craft)
         this.item = item
     }
+
+    fun isOnItemUse(): Boolean {
+        return triggers.contains(TriggerType.UseItem)
+    }
+
+    fun isOnBlockUse(): Boolean {
+        return triggers.contains(TriggerType.UseBlock)
+    }
 }
 
-enum class TriggerType {
-    UseItem,
-    UseBlock,
-    Craft,
-}

@@ -3,8 +3,10 @@
   "package": "org.pkozak.mixin.client",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "OnPlayerRespawnMixin",
-    "ItemEventsMixin"
+    "ClientNetworkHandlerMixin",
+    "ItemStackMixin",
+    "MinecraftClientMixin",
+    "WorldEventHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

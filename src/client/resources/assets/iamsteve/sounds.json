@@ -23,6 +23,26 @@
     "sounds": [
       "iamsteve:flint_and_steel"
     ]
+  },
+  "minecraft": {
+    "sounds": [
+      "iamsteve:minecraft"
+    ]
+  },
+  "overworld": {
+    "sounds": [
+      "iamsteve:overworld"
+    ]
+  },
+  "nether": {
+    "sounds": [
+      "iamsteve:nether"
+    ]
+  },
+  "chicken_jockey": {
+    "sounds": [
+      "iamsteve:chicken_jockey"
+    ]
   }
 }
 

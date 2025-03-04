@@ -2,18 +2,19 @@
 	"schemaVersion": 1,
 	"id": "i-am-steve",
 	"version": "${version}",
-	"name": "I am Steve",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Minecraft - Movie edition",
+	"description": "You can finally feel like Steve from the hit movie Minecraft inside the game Minecraft based on the Minecraft movie.",
 	"authors": [
-		"Me!"
+		"SnailMan"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/project/mc-movie-edition",
+		"sources": "https://github.com/UltimateDoge5/mc-movie-edition",
+		"issues": "https://github.com/UltimateDoge5/mc-movie-edition/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/i-am-steve/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
 		"main": [
 			{
@@ -41,8 +42,5 @@
 		"java": ">=21",
 		"fabric-api": "*",
 		"fabric-language-kotlin": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
