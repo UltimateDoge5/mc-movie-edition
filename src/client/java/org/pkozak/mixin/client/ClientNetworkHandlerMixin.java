@@ -11,7 +11,7 @@ import net.minecraft.network.packet.s2c.play.GameJoinS2CPacket;
 import net.minecraft.network.packet.s2c.play.ItemPickupAnimationS2CPacket;
 import net.minecraft.network.packet.s2c.play.PlayerRespawnS2CPacket;
 import net.minecraft.sound.SoundCategory;
-import org.pkozak.IAmSteveClient;
+import org.pkozak.McMovieEditionClient;
 import org.pkozak.Sounds;
 import org.pkozak.Trigger;
 import org.spongepowered.asm.mixin.Mixin;
@@ -43,7 +43,7 @@ public class ClientNetworkHandlerMixin {
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
         if (player != null) {
             Item item = ((ItemEntity) entity).getStack().getItem();
-            for (Trigger trigger : IAmSteveClient.INSTANCE.getTriggers()) {
+            for (Trigger trigger : McMovieEditionClient.INSTANCE.getTriggers()) {
                 if (item == trigger.getItem()) {
                     player.playSoundToPlayer(trigger.getSoundEvent(), SoundCategory.PLAYERS, 1.0F, 1.0F);
                 }

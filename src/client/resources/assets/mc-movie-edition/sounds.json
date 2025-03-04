@@ -1,47 +1,47 @@
 {
   "crafting_table": {
     "sounds": [
-      "iamsteve:crafting_table"
+      "mc-movie-edition:crafting_table"
     ]
   },
   "steve": {
     "sounds": [
-      "iamsteve:steve"
+      "mc-movie-edition:steve"
     ]
   },
   "enderpearl": {
     "sounds": [
-      "iamsteve:enderpearl"
+      "mc-movie-edition:enderpearl"
     ]
   },
   "water_bucket": {
     "sounds": [
-      "iamsteve:water_bucket"
+      "mc-movie-edition:water_bucket"
     ]
   },
   "flint_and_steel": {
     "sounds": [
-      "iamsteve:flint_and_steel"
+      "mc-movie-edition:flint_and_steel"
     ]
   },
   "minecraft": {
     "sounds": [
-      "iamsteve:minecraft"
+      "mc-movie-edition:minecraft"
     ]
   },
   "overworld": {
     "sounds": [
-      "iamsteve:overworld"
+      "mc-movie-edition:overworld"
     ]
   },
   "nether": {
     "sounds": [
-      "iamsteve:nether"
+      "mc-movie-edition:nether"
     ]
   },
   "chicken_jockey": {
     "sounds": [
-      "iamsteve:chicken_jockey"
+      "mc-movie-edition:chicken_jockey"
     ]
   }
 }

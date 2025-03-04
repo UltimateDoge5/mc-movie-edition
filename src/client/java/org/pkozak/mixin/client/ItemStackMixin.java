@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.world.World;
-import org.pkozak.IAmSteveClient;
+import org.pkozak.McMovieEditionClient;
 import org.pkozak.Trigger;
 import org.pkozak.TriggerType;
 import org.spongepowered.asm.mixin.Mixin;
@@ -23,7 +23,7 @@ public abstract class ItemStackMixin {
     @Inject(at = @At("HEAD"), method = "onCraftByPlayer(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;I)V")
     private void onCraftByPlayer(World world, PlayerEntity player, int amount, CallbackInfo ci) {
         Item item = this.getItem();
-        for (Trigger trigger : IAmSteveClient.INSTANCE.getTriggers()) {
+        for (Trigger trigger : McMovieEditionClient.INSTANCE.getTriggers()) {
             if (trigger.getTriggerTypes().contains(TriggerType.Craft) && item == trigger.getItem()) {
                 player.playSoundToPlayer(trigger.getSoundEvent(), SoundCategory.PLAYERS, 1.0F, 1.0F);
             }

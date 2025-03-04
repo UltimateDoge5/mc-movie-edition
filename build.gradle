@@ -23,7 +23,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"i-am-steve" {
+		"mc-movie-edition" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

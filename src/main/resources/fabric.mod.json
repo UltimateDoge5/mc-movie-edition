@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "i-am-steve",
+	"id": "mc-movie-edition",
 	"version": "${version}",
 	"name": "Minecraft - Movie edition",
 	"description": "You can finally feel like Steve from the hit movie Minecraft inside the game Minecraft based on the Minecraft movie.",
@@ -13,26 +13,26 @@
 		"issues": "https://github.com/UltimateDoge5/mc-movie-edition/issues"
 	},
 	"license": "MIT",
-	"icon": "assets/i-am-steve/icon.png",
+	"icon": "assets/mc-movie-edition/icon.png",
 	"environment": "client",
 	"entrypoints": {
 		"main": [
 			{
-				"value": "org.pkozak.IAmSteve",
+				"value": "org.pkozak.McMovieEdition",
 				"adapter": "kotlin"
 			}
 		],
 		"client": [
 			{
-				"value": "org.pkozak.IAmSteveClient",
+				"value": "org.pkozak.McMovieEditionClient",
 				"adapter": "kotlin"
 			}
 		]
 	},
 	"mixins": [
-		"i-am-steve.mixins.json",
+		"mc-movie-edition.mixins.json",
 		{
-			"config": "i-am-steve.client.mixins.json",
+			"config": "mc-movie-edition.client.mixins.json",
 			"environment": "client"
 		}
 	],
