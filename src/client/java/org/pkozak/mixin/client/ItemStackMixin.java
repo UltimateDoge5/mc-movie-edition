@@ -24,7 +24,7 @@ public abstract class ItemStackMixin {
     private void onCraftByPlayer(World world, PlayerEntity player, int amount, CallbackInfo ci) {
         Item item = this.getItem();
         for (Trigger trigger : McMovieEditionClient.INSTANCE.getTriggers()) {
-            if (trigger.getTriggerTypes().contains(TriggerType.Craft) && item == trigger.getItem()) {
+            if (trigger.isOnCraft() && item == trigger.getItem()) {
                 player.playSoundToPlayer(trigger.getSoundEvent(), SoundCategory.PLAYERS, 1.0F, 1.0F);
             }
         }

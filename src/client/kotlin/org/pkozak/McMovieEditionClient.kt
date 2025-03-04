@@ -19,7 +19,7 @@ import net.minecraft.world.RaycastContext
 import org.slf4j.LoggerFactory
 
 object McMovieEditionClient : ClientModInitializer {
-    private val logger = LoggerFactory.getLogger("mc-movie-edition")
+    val logger = LoggerFactory.getLogger("mc-movie-edition")
     private var seenJockeys = mutableSetOf<Int>()
     var triggers = mutableSetOf<Trigger>()
 

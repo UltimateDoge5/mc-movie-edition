@@ -35,5 +35,9 @@ class Trigger(val soundEvent: SoundEvent) {
     fun isOnBlockUse(): Boolean {
         return triggers.contains(TriggerType.UseBlock)
     }
+
+    fun isOnCraft(): Boolean {
+        return triggers.contains(TriggerType.Craft)
+    }
 }
 
