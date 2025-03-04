@@ -1,5 +1,5 @@
 ## Minecraft - Movie edition
-<a href="https://modrinth.com/mod/phantomshapes"><img src="https://raw.githubusercontent.com/Suiranoil/badges/main/assets/minecraft/platform/modrinth/mini/badge.svg" alt="Modrinth" height="32"></a>  
+<a href="https://modrinth.com/mod/mc-movie-edition"><img src="https://raw.githubusercontent.com/Suiranoil/badges/main/assets/minecraft/platform/modrinth/mini/badge.svg" alt="Modrinth" height="32"></a>  
 A shitpost mod born out of necessity - [https://x.com/Shayy_TV/status/1896358807233761588](https://x.com/Shayy_TV/status/1896358807233761588)
 
 The most annoying mod on planet earth lets you feel like Steve from the hit movie Minecraft in the game Minecraft based on the movie Minecraft.
