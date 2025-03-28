@@ -1,7 +1,8 @@
 package org.pkozak.mixin.client;
 
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.world.WorldEventHandler;
+import net.minecraft.client.render.WorldRenderer;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -13,12 +14,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(WorldEventHandler.class)
+@Mixin(WorldRenderer.class)
 public class WorldEventHandlerMixin {
 
     @Shadow
-    @Final
-    private World world;
+//    @Final
+//    private World world;
+    private ClientWorld world;
 
     @Shadow
     @Final

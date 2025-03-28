@@ -1,46 +1,49 @@
 {
-	"schemaVersion": 1,
-	"id": "mc-movie-edition",
-	"version": "${version}",
-	"name": "Minecraft - Movie edition",
-	"description": "You can finally feel like Steve from the hit movie Minecraft inside the game Minecraft based on the Minecraft movie.",
-	"authors": [
-		"SnailMan"
-	],
-	"contact": {
-		"homepage": "https://modrinth.com/project/mc-movie-edition",
-		"sources": "https://github.com/UltimateDoge5/mc-movie-edition",
-		"issues": "https://github.com/UltimateDoge5/mc-movie-edition/issues"
-	},
-	"license": "MIT",
-	"icon": "assets/mc-movie-edition/icon.png",
-	"environment": "client",
-	"entrypoints": {
-		"main": [
-			{
-				"value": "org.pkozak.McMovieEdition",
-				"adapter": "kotlin"
-			}
-		],
-		"client": [
-			{
-				"value": "org.pkozak.McMovieEditionClient",
-				"adapter": "kotlin"
-			}
-		]
-	},
-	"mixins": [
-		"mc-movie-edition.mixins.json",
-		{
-			"config": "mc-movie-edition.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.21.4",
-		"java": ">=21",
-		"fabric-api": "*",
-		"fabric-language-kotlin": "*"
-	}
+  "schemaVersion": 1,
+  "id": "mc-movie-edition",
+  "version": "${version}",
+  "name": "Minecraft - Movie edition",
+  "description": "You can finally feel like Steve from the hit movie Minecraft inside the game Minecraft based on the Minecraft movie.",
+  "authors": [
+    "SnailMan"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/project/mc-movie-edition",
+    "sources": "https://github.com/UltimateDoge5/mc-movie-edition",
+    "issues": "https://github.com/UltimateDoge5/mc-movie-edition/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/mc-movie-edition/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "org.pkozak.McMovieEdition",
+        "adapter": "kotlin"
+      }
+    ],
+    "client": [
+      {
+        "value": "org.pkozak.McMovieEditionClient",
+        "adapter": "kotlin"
+      }
+    ]
+  },
+  "mixins": [
+    "mc-movie-edition.mixins.json",
+    {
+      "config": "mc-movie-edition.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": [
+      "1.21",
+      "1.21.1"
+    ],
+    "java": ">=21",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*"
+  }
 }

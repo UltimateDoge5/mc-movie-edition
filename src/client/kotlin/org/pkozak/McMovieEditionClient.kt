@@ -9,11 +9,13 @@ import net.minecraft.client.MinecraftClient
 import net.minecraft.entity.Entity
 import net.minecraft.entity.mob.ZombieEntity
 import net.minecraft.entity.passive.ChickenEntity
+import net.minecraft.item.ItemStack
 import net.minecraft.item.Items
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.sound.SoundCategory
 import net.minecraft.util.ActionResult
+import net.minecraft.util.TypedActionResult
 import net.minecraft.util.math.Box
 import net.minecraft.world.RaycastContext
 import org.slf4j.LoggerFactory
@@ -72,11 +74,11 @@ object McMovieEditionClient : ClientModInitializer {
                     } else {
                         itemUseNonce = 0
                     }
-                    return@register ActionResult.PASS
+                    return@register TypedActionResult.pass<ItemStack>(ItemStack.EMPTY)
                 }
             }
 
-            return@register ActionResult.PASS
+            return@register TypedActionResult.pass<ItemStack>(ItemStack.EMPTY)
         }
 
         // Check for nearby entities, if a chicken has a zombie riding it, and if it's in the players' view.
@@ -98,9 +100,9 @@ object McMovieEditionClient : ClientModInitializer {
                 }) {
                     val isVisible = player.canSee(
                         entity,
-                        RaycastContext.ShapeType.VISUAL,
-                        RaycastContext.FluidHandling.NONE,
-                        entity.eyeY
+//                        RaycastContext.ShapeType.VISUAL,
+//                        RaycastContext.FluidHandling.NONE,
+//                        entity.eyeY
                     ) && frustum!!.isVisible(entity.boundingBox)
 
                     if (!seenJockeys.contains(entity.id) && isVisible) {
@@ -126,6 +128,7 @@ object McMovieEditionClient : ClientModInitializer {
 
         triggers.add(Trigger(Sounds.CRAFTING_TABLE_EVENT).apply {
             onBlockUse(Blocks.CRAFTING_TABLE)
+            onCraft(Items.CRAFTING_TABLE)
         })
 
         triggers.add(Trigger(Sounds.ENDERPEARL_EVENT).apply {

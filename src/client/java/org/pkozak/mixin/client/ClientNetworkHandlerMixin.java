@@ -44,7 +44,7 @@ public class ClientNetworkHandlerMixin {
     }
 
     // This gets triggered every time the player loads into a world (dimension change counts). Only the first load event is important.
-    @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;setLoaded(Z)V", shift = At.Shift.AFTER), method = "tick()V")
+    @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/WorldLoadingState;tick()V", shift = At.Shift.AFTER), method = "tick()V")
     public void tick(CallbackInfo ci) {
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
         if (MinecraftClient.getInstance().player == null || loadedNonce) return;
