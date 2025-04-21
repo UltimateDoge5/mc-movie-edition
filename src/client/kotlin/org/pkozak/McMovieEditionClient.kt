@@ -126,6 +126,7 @@ object McMovieEditionClient : ClientModInitializer {
 
         triggers.add(Trigger(Sounds.CRAFTING_TABLE_EVENT).apply {
             onBlockUse(Blocks.CRAFTING_TABLE)
+            onCraft(Items.CRAFTING_TABLE)
         })
 
         triggers.add(Trigger(Sounds.ENDERPEARL_EVENT).apply {

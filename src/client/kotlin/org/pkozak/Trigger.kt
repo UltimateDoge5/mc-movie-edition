@@ -7,6 +7,9 @@ import net.minecraft.sound.SoundEvent
 class Trigger(val soundEvent: SoundEvent) {
     var block: Block? = null
     var item: Item? = null
+
+    // Sometimes the events are called twice, this lets me track them
+    var debounceVar = false;
     var triggers = mutableSetOf<TriggerType>()
 
     fun getTriggerTypes(): Set<TriggerType> {
