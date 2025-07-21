@@ -18,7 +18,7 @@ public class MinecraftClientMixin {
     @Final
     private SoundManager soundManager;
 
-    @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;createInitScreens(Ljava/util/List;)V", shift = At.Shift.AFTER), method = "onInitFinished")
+    @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;createInitScreens(Ljava/util/List;)Z", shift = At.Shift.AFTER), method = "onInitFinished")
     public void onInitFinished(CallbackInfoReturnable<Runnable> ci) {
         SoundInstance sound = PositionedSoundInstance.master(Sounds.Companion.getMINECRAFT_EVENT(), 1.0F);
         soundManager.play(sound);
